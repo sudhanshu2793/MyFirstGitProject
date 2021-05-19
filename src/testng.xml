@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  
+  <test name="Test">
+  	<parameter name="browserName" value="chrome"></parameter>
+  	<parameter name = "URL" value = "https://www.facebook.com/" ></parameter>
+  	<parameter name = "loginName" value = "karnkeshav60@gmail.com" ></parameter>
+  	<parameter name = "password" value = "Keshav@123" ></parameter>
+  	<parameter name = "accountName" value = "Keshav Karn" ></parameter>
+  	<parameter name = "verbiageOfPost" value="Hello Friends"></parameter>
+	<groups>
+		<run>
+			<exclude name="notRun"></exclude>
+		</run>
+	</groups>
+  	<classes>
+  		<class name="utility.InstantiateWebdriver"></class>
+  		<class name ="testScenarios.PostStatusOnFacebook"></class>
+  	</classes>
+  </test> 
+</suite> 
